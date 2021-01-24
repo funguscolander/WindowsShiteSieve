@@ -1,5 +1,23 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:WindowsShiteSieveGUI">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:WindowsShiteSieveGUI">
+    
+    <!--#region  Button-->
+    <Style x:Key="ConfigurationButton" TargetType="Button">
+        <Setter Property="Margin" Value="0,0,0,5"/>
+    </Style>
+
+    <Style x:Key="ExecutableButton" TargetType="Button" BasedOn="{StaticResource ConfigurationButton}">
+        
+    </Style>
+    <!--#endregion-->
+    
+    <!--#region Checkbox-->
+    <Style x:Key="MainCheckbox" TargetType="CheckBox">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+    <!--#endregion-->
     
 </ResourceDictionary>

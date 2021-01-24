@@ -1,0 +1,69 @@
+﻿<Window x:Class="WindowsShiteSieveGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsShiteSieveGUI"
+        mc:Ignorable="d"
+        Title="Windows Shite Sieve" Style="{StaticResource MainWindow}">
+    
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Resources/MainStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Grid Style="{StaticResource WindowGrid}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Style="{StaticResource Title}" Grid.Row="0" x:Name="TitleShiteSieve" Content="Shite Sieve"/>
+        <Grid Grid.Row="1" Style="{StaticResource DefaultGrid}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Style="{StaticResource ExecutableButton}" x:Name="ButtonLoadConfig" Margin="0,0,0,5" Click="LoadConfig_Click">
+                <TextBlock Style="{StaticResource ButtonTextBlock}">Load Configuration</TextBlock>
+            </Button>
+            <Button Grid.Column="1" Style="{StaticResource ExecutableButton}" x:Name="ButtonSaveConfig" Margin="5,0,5,5" Click="SaveConfig_Click">
+                <TextBlock Style="{StaticResource ButtonTextBlock}">Save Configuration</TextBlock>
+            </Button>
+            <Button Grid.Column="2" Style="{StaticResource ExecutableButton}" x:Name="ButtonSaveRun" Margin="0,0,0,5" Click="SaveRun_Click">
+                <TextBlock Style="{StaticResource ButtonTextBlock}">Save &amp; Run</TextBlock>
+            </Button>
+        </Grid>
+        <Label Grid.Row="2" Style="{StaticResource DefaultLabel}" x:Name="HeadingAppRemoval" Content="App Removal"/>
+        <Button Grid.Row="3" Style="{StaticResource ConfigurationButton}" x:Name="ButtonUWPApps" Content="UWP Applications" Click="UWPApps_Click"/>
+        <Button Grid.Row="4" Style="{StaticResource ConfigurationButton}" x:Name="ButtonOtherApps" Content="All Other Applications" Click="OtherApps_Click"/>
+        <CheckBox Grid.Row="5" Style="{StaticResource MainCheckbox}" x:Name="CheckboxAllUsers" Content="Uninstall for All Users" Checked="AllUsers_Checked" Unloaded="AllUsers_Unchecked"/>
+        <Label Grid.Row="6" Style="{StaticResource DefaultLabel}" x:Name="HeadingSettings" Content="Settings"/>
+        <Button Grid.Row="7" Style="{StaticResource ConfigurationButton}" x:Name="ButtonGeneralSettings" Content="General Settings" Click="GeneralSettings_Click"/>
+        <Button Grid.Row="8" Style="{StaticResource ConfigurationButton}" x:Name="ButtonRegistryEdits" Content="Registry Edits" Click="RegistryEdits_Click"/>
+        <Button Grid.Row="9"  Style="{StaticResource ConfigurationButton}" x:Name="ButtonStartMenu" Content="Start Menu" Click="StartMenu_Click" />
+        <Button Grid.Row="10" Style="{StaticResource ConfigurationButton}" x:Name="ButtonTasks" Content="Tasks" Click="Tasks_Click"/>
+        <Button Grid.Row="11" Style="{StaticResource ConfigurationButton}" x:Name="ButtonWindowsExplorer" Content="Windows Explorer" Click="WindowsExplorer_Click"/>
+        <Label Grid.Row="12" Style="{StaticResource DefaultLabel}" x:Name="HeadingRevertChanges" Content="Revert Changes"/>
+        <Button Grid.Row="13" Style="{StaticResource ConfigurationButton}" x:Name="ButtonRevertAll" Content="Revert All Changes" Click="RevertAllChanges_Click"/>
+        <Button Grid.Row="14" Style="{StaticResource ConfigurationButton}" x:Name="ButtonRevertRegistry" Content="Revert Registry Edits" Click="RevertRegistryEdits_Click"/>
+        <Button Grid.Row="15" Style="{StaticResource ConfigurationButton}" x:Name="ButtonRevertSpecific" Content="Revert Specific Changes" Click="RevertSpecificChange_Click"/>
+    </Grid>
+</Window>

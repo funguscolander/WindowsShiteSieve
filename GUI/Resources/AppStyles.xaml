@@ -1,0 +1,88 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WindowsShiteSieveGUI.Resources">
+
+    <!--#region Window-->
+    <Style x:Key="MainWindow" TargetType="{x:Type Window}">
+        <Setter Property="WindowStyle" Value="SingleBorderWindow"/>
+        <Setter Property="Height" Value="610"/>
+        <Setter Property="Width" Value="330"/>
+        <Setter Property="MinHeight" Value="610"/>
+        <Setter Property="MinWidth" Value="330"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+
+    <Style x:Key="ConfigurationWindow" TargetType="{x:Type Window}">
+        <Setter Property="WindowStyle" Value="ToolWindow"/>
+        <Setter Property="Height" Value="450"/>
+        <Setter Property="Width" Value="400"/>
+        <Setter Property="MinHeight" Value="450"/>
+        <Setter Property="MinWidth" Value="400"/>
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+    <!--#endregion-->
+    
+    <!--#region Text-->
+    <Style x:Key="DefaultLabel" TargetType="{x:Type Label}">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="24"/>
+    </Style>
+
+    <Style x:Key="Title" TargetType="{x:Type Label}" BasedOn="{StaticResource DefaultLabel}">
+        <Setter Property="FontSize" Value="36"/>
+    </Style>
+   
+    <Style x:Key="ConfigurationLabel" TargetType="{x:Type Label}">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+
+    <Style x:Key="ButtonTextBlock" TargetType="{x:Type TextBlock}">
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+    </Style>
+    <!--#endregion-->
+    
+    <!--#region Checkbox-->
+    <Style x:Key="ConfigurationCheckbox" TargetType="{x:Type CheckBox}">
+        
+    </Style>
+    <!--#endregion-->
+    
+    <!--#region Listbox-->
+    <Style x:Key="ConfigurationListBox" TargetType="ListBox">
+        <Setter Property="SelectionMode" Value="Multiple"/>
+        <Setter Property="Margin" Value="5,0,5,10"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+    </Style>
+    
+    <Style TargetType="ListBoxItem">
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                    <CheckBox Margin="5,2" IsChecked="{TemplateBinding IsSelected}">
+                        <ContentPresenter/>
+                    </CheckBox>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion-->
+    
+    <!--#region Grid-->
+    <Style x:Key="DefaultGrid" TargetType="{x:Type Grid}">
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+    </Style>
+
+    <Style x:Key="WindowGrid" TargetType="{x:Type Grid}" BasedOn="{StaticResource DefaultGrid}">
+        <Setter Property="Margin" Value="5,0,5,0"/>
+    </Style>
+    <!--#endregion-->
+
+</ResourceDictionary>
