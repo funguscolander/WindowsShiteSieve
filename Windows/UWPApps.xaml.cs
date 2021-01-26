@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static WindowsShiteSieveGUI.MainWindow;
 
 namespace WindowsShiteSieveGUI
 {
@@ -19,6 +21,8 @@ namespace WindowsShiteSieveGUI
     /// </summary>
     public partial class UWPApps : Window
     {
+        public ObservableCollection<BoolStringClass> List_UWPApps { get; set; }
+
         public UWPApps()
         {
             InitializeComponent();

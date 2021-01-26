@@ -5,14 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowsShiteSieveGUI"
         mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=local:MainWindow}"
         Title="UWP Applications" Style="{StaticResource ConfigurationWindow}">
-    
+
     <Grid Style="{StaticResource WindowGrid}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Style="{StaticResource ConfigurationLabel}" x:Name="SelectUWPAppsToUninstall" Content="Select UWP apps to uninstall:"/>
-        <ListBox Grid.Row="1" Style="{StaticResource ConfigurationListBox}" x:Name="UWPAppsListBox" ItemsSource="{Binding UWPApps_List}"/>
+        <Label Grid.Row="0" Style="{StaticResource ConfigurationLabel}" x:Name="TextSelectUWPAppsToUninstall" Content="Select UWP apps to uninstall:"/>
+        <!--<ListBox Grid.Row="1" Style="{StaticResource ConfigurationListBox}" x:Name="UWPAppsListBox" ItemsSource="{Binding UWPApps_List}"/>-->
+        <ListBox Grid.Row="1" ItemsSource="{Binding List_UWPApps}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>
