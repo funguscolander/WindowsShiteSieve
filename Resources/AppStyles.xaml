@@ -51,10 +51,22 @@
     </Style>
     <!--#endregion-->
     
+    <!--#region Grid-->
+    <Style x:Key="DefaultGrid" TargetType="{x:Type Grid}">
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+    </Style>
+
+    <Style x:Key="WindowGrid" TargetType="{x:Type Grid}" BasedOn="{StaticResource DefaultGrid}">
+        <Setter Property="Margin" Value="5,0,5,5"/>
+    </Style>
+    <!--#endregion-->
+    
     <!--#region Listbox-->
     <Style x:Key="ConfigurationListBox" TargetType="ListBox">
-        <Setter Property="SelectionMode" Value="Multiple"/>
-        <Setter Property="Margin" Value="5,0,5,10"/>
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="SelectionMode" Value="Single"/>
+        <Setter Property="Margin" Value="5,0,5,5"/>
         <Setter Property="VerticalAlignment" Value="Stretch"/>
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
     </Style>
@@ -65,24 +77,11 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ListBoxItem">
-                    <CheckBox Margin="5,2" IsChecked="{TemplateBinding IsSelected}">
-                        <ContentPresenter/>
-                    </CheckBox>
+                    <CheckBox Margin="5,2" IsChecked="{Binding IsSelected}" Content="{Binding OptionName}"/>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
     <!--#endregion-->
     
-    <!--#region Grid-->
-    <Style x:Key="DefaultGrid" TargetType="{x:Type Grid}">
-        <Setter Property="VerticalAlignment" Value="Stretch"/>
-        <Setter Property="HorizontalAlignment" Value="Stretch"/>
-    </Style>
-
-    <Style x:Key="WindowGrid" TargetType="{x:Type Grid}" BasedOn="{StaticResource DefaultGrid}">
-        <Setter Property="Margin" Value="5,0,5,0"/>
-    </Style>
-    <!--#endregion-->
-
 </ResourceDictionary>
