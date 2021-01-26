@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowsShiteSieveGUI"
         mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=local:MainWindow}"
         Title="Windows Shite Sieve" Style="{StaticResource MainWindow}">
     
     <Window.Resources>
@@ -41,13 +42,13 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Style="{StaticResource ExecutableButton}" x:Name="ButtonLoadConfig" Margin="0,0,0,5" Click="LoadConfig_Click">
+            <Button Grid.Column="0" Style="{StaticResource ExecutableButton}" x:Name="ButtonLoadConfig" Margin="5,0,0,5" Click="LoadConfig_Click">
                 <TextBlock Style="{StaticResource ButtonTextBlock}">Load Configuration</TextBlock>
             </Button>
             <Button Grid.Column="1" Style="{StaticResource ExecutableButton}" x:Name="ButtonSaveConfig" Margin="5,0,5,5" Click="SaveConfig_Click">
                 <TextBlock Style="{StaticResource ButtonTextBlock}">Save Configuration</TextBlock>
             </Button>
-            <Button Grid.Column="2" Style="{StaticResource ExecutableButton}" x:Name="ButtonSaveRun" Margin="0,0,0,5" Click="SaveRun_Click">
+            <Button Grid.Column="2" Style="{StaticResource ExecutableButton}" x:Name="ButtonSaveRun" Margin="0,0,5,5" Click="SaveRun_Click">
                 <TextBlock Style="{StaticResource ButtonTextBlock}">Save &amp; Run</TextBlock>
             </Button>
         </Grid>
