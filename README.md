@@ -1,5 +1,8 @@
 # WindowsShiteSieve
- Filter the shite from Windows 10 and change settings to be more comfortable for you. Cut holes in the sieve to let some shite through or patch it up in other areas you think there is more shite to be filtered.
+
+> :warning: **This project has been archived with the annonuncement of Windows 11**
+
+Filter the shite from Windows 10 and change settings to be more comfortable for you. Cut holes in the sieve to let some shite through or patch it up in other areas you think there is more shite to be filtered.
 
 There are other Windows 10 Debloaters available which currently have a lot more functionality than this one, such as [sycnex/Windows10Debloater](https://github.com/Sycnex/Windows10Debloater) and [farag2/Windows-10-Sophia-Script](https://github.com/farag2/Windows-10-Sophia-Script), however I ran into issues with Windows after using them and did not understand their functionality well enough to know what was causing my problems. And so here we are, at the beginnings of a `.ini` configurable script where I can figure out how Windows functions while learning PowerShell, C#, and Visual Studio.
 
